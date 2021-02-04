@@ -19,7 +19,7 @@ export default function Home({ data }) {
     <div>
       <h2>My Resume</h2>
       <ul>
-        {data.allAirtable.nodes.map(node => (
+        {data.allAirtable.nodes.filter(node => node.data.Name).map(node => (
           <li key={node.recordId}>{node.data.Name}</li>
         ))}
       </ul>
