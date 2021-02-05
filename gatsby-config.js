@@ -15,7 +15,13 @@ module.exports = {
         tables: [
           {
             baseId: 'appVaB6Udj7g2lmCj',
-            tableName: 'Items'
+            tableName: 'Items',
+            tableLinks: ['Company']
+          },
+          {
+            baseId: 'appVaB6Udj7g2lmCj',
+            tableName: 'Companies',
+            tableLinks: ['Items']
           }
         ]
       }

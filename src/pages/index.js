@@ -5,9 +5,14 @@ export const query = graphql`
   {
     allAirtable(filter: {table: {eq: "Items"}}) {
       nodes {
-        recordId
+        table
         data {
           Name
+          Company {
+            data {
+              Name
+            }
+          }
           Role
         }
       }
