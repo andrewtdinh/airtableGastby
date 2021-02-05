@@ -8,6 +8,7 @@ export const query = graphql`
         recordId
         data {
           Name
+          Role
         }
       }
     }
@@ -20,7 +21,7 @@ export default function Home({ data }) {
       <h2>My Resume</h2>
       <ul>
         {data.allAirtable.nodes.filter(node => node.data.Name).map(node => (
-          <li key={node.recordId}>{node.data.Name}</li>
+          <li key={node.recordId}>{node.data.Role} at {node.data.Name}</li>
         ))}
       </ul>
     </div>
